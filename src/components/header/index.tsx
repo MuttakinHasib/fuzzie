@@ -16,8 +16,8 @@ export const Header = () => {
   const { setTheme } = useTheme();
 
   return (
-    <div className="bg-background border-border border-b shadow">
-      <header className="container py-3 flex items-center justify-between gap-10">
+    <div className="bg-background border-border border-b shadow h-16 flex items-center">
+      <header className="container flex items-center justify-between gap-10">
         <Link href="/" className="text-foreground font-bold">
           Fuzzie.
         </Link>
