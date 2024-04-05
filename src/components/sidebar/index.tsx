@@ -18,7 +18,7 @@ const NAV = [
 
 export const Sidebar = () => {
   return (
-    <div className="border-r border-border w-[10vw] h-[calc(100vh-65px)] flex flex-col">
+    <div className="border-r border-border w-[10vw] h-full flex flex-col">
       {NAV.map((item) => (
         <Link
           href={{ pathname: item.href }}

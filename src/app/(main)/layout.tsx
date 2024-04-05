@@ -1,15 +1,18 @@
 import { Header, Sidebar } from "@/components";
+import { WorkflowProvider } from "@/providers";
 import React, { PropsWithChildren } from "react";
 
 const MainLayout = ({ children }: PropsWithChildren) => {
   return (
-    <main>
-      <Header />
-      <div className="flex">
-        <Sidebar />
-        {children}
-      </div>
-    </main>
+    <WorkflowProvider>
+      <main>
+        <Header />
+        <div className="flex h-[calc(100vh-65px)]">
+          <Sidebar />
+          {children}
+        </div>
+      </main>
+    </WorkflowProvider>
   );
 };
 
