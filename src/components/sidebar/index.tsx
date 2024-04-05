@@ -5,29 +5,32 @@ const NAV = [
   {
     name: "Home",
     href: "/",
+    icon: "",
   },
   {
     name: "Dashboard",
     href: "/dashboard",
+    icon: "",
   },
   {
     name: "Workflow",
     href: "/workflow",
+    icon: "",
   },
 ];
 
 export const Sidebar = () => {
   return (
-    <div className="border-r border-border w-[10vw] h-full flex flex-col">
+    <aside className="border-r border-border max-w-60 h-full flex flex-col w-full">
       {NAV.map((item) => (
         <Link
           href={{ pathname: item.href }}
           key={item.name}
-          className="text-foreground font-semibold hover:bg-muted py-2 px-5"
+          className="text-foreground font-semibold hover:bg-muted py-3 px-10"
         >
           {item.name}
         </Link>
       ))}
-    </div>
+    </aside>
   );
 };
